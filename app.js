@@ -67,16 +67,24 @@ let size = "";
   type = "Other";
 }*/
 
-switch(typeId == "01"){
-  case "tanktop" :
-    console.log("tank top")
+switch(typeId) {
+  case "01" :
+    type = "tank top";
     break;
-  case "t-shirt" :
-    console.log("t-shirt")  
+  case "02" :
+    type = "t-shirt";  
     break;
+  case "03" :
+    type = "long sleeve";
+    break;  
+  case "04" :
+    type = "sweat shirt";
+    break;
+  default : 
+    type = "other";
 }
 
-if (colorId == "BL") {
+/*if (colorId == "BL") {
   color = "Black";
 } else if (colorId == "BL") {
   color = "Blue";
@@ -86,9 +94,26 @@ if (colorId == "BL") {
   color = "Purple";
 } else {
   color = "White";
+}*/
+
+switch (colorId) {
+  case "BL" :
+  color = "black";
+  break;
+  case "BU" :
+  color = "blue";
+  break;  
+  case "RD" :
+  color = "red";
+  break;
+  case "PU" :
+  color = "purple"
+  break;
+  default :
+    color = "white";  
 }
 
-if (sizeId == "S") {
+/*if (sizeId == "S") {
   size = "Small";
 } else if (sizeId == "M") {
   size = "Medium";
@@ -98,6 +123,23 @@ if (sizeId == "S") {
   size = "Extra Large";
 } else {
   size = "One Size Fits All";
+}*/
+
+switch (sizeId) {
+  case "S" : 
+  size = "small";
+  break;
+  case "M" : 
+  size = "medium";
+  break;
+  case "L" : 
+  size = "large";
+  break;
+  case "XL" :
+  size = "extra large";
+  break;
+  default :
+    size = "one size fits all";
 }
 
 console.log(`Product: ${size} ${color} ${type}`);
